@@ -1,0 +1,9 @@
+version: "3"
+services:
+  server:
+    build: ./
+    ports:
+    - 3300:80
+    volumes:
+    - "./dist:/var/www/atom/"
+    - "./nginx-default.conf:/etc/nginx/conf.d/default.conf"

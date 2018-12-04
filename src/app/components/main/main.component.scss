@@ -1,0 +1,41 @@
+.content{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #1b1b1b;
+  background: #f9f9f9;
+  h1{
+    text-align: center;
+  }
+}
+
+.discover{
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  font-size: 32px;
+  border: 1px solid #bbb;
+  padding: 0 20px;
+}
+
+.technologies{
+  text-align: center;
+  font-size: 18px;
+  ul{
+    padding: 0;
+    list-style: none;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    li{
+      .logo{
+        max-height: 60px;
+        width: 100px;
+      }
+    }
+  }
+}

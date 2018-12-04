@@ -1,0 +1,17 @@
+<div class="content">
+    <div>
+        <h1>
+            Welcome to Atom Simulator
+        </h1>
+    </div>
+    <div class="technologies">
+        <ul>
+            <li *ngFor="let item of resources;">
+                <img class="logo" [src]="item.image" alt="">
+            </li>
+        </ul>
+    </div>
+    <div>
+        <a routerLink="/atom" class="discover">Discover</a>
+    </div>
+</div>

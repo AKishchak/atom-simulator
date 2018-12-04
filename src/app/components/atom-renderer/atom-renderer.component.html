@@ -1,0 +1,48 @@
+<div>
+    <div class="polygon"></div>
+    <div class="preferences" [hidden]="!showPreferences">
+        <form class="form" #settingsForm="ngForm">
+            <div class="form-group">
+                <label>Speed</label>
+                <ng5-slider [(value)]="sceneProps.increment" [options]="sliders.speed"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <label>Camera</label>
+                <ng5-slider [(value)]="settings.front" [options]="sliders.camera"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <label>Electrons count</label>
+                <ng5-slider [(value)]="settings.count" [options]="sliders.electrons"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <label>Stretch by X</label>
+                <ng5-slider [(value)]="settings.stretchX" [options]="sliders.stretch"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <label>Stretch by Y</label>
+                <ng5-slider [(value)]="settings.stretchY" [options]="sliders.stretch"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <label>Rotation</label>
+                <ng5-slider [(value)]="settings.rotate" [options]="sliders.camera"></ng5-slider>
+            </div>
+            <div class="form-group mb-5">
+                <label for="tracing">Tracing</label>
+                <input type="checkbox" name="tracing" id="tracing" value="true" [(ngModel)]="settings.tracing">
+            </div>
+            <div class="form-group mb-5" [hidden]="!settings.tracing">
+                <label>Tracing length</label>
+                <ng5-slider [(value)]="settings.tracingLength" [options]="sliders.tracing"></ng5-slider>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary mr-5" (click)="randomize_orbits()">Randomize orbits</button>
+                <button class="btn btn-primary" (click)="togglePause()">
+                    {{ paused ? 'RUN' : 'PAUSE' }}
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="button-pref" (click)="showPreferences = !showPreferences">
+        Settings
+    </div>
+</div>
